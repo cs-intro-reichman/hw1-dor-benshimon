@@ -8,7 +8,7 @@ public class Bill3 {
 		int total = Integer.parseInt(args[3]);
 		double each = total / 3.0;
 		each = Math.ceil(each);
-		System.out.println( "Dear "+ Ron +", "+ Lisa + " , and " + Dan + ": pay " + each + " Shekels each.");
+		System.out.println( "Dear "+ Ron +", "+ Lisa + ", and " + Dan + ": pay " + each + " Shekels each.");
 
 	}
 }
