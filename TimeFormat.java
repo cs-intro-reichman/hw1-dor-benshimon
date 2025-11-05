@@ -13,22 +13,23 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
-		String light ;
-		if (hours > 12){
-		light = "PM"; 
-		} else{ light = "AM" ;
-		}
-		if (hours>12){
-		hours = hours-12;
-		}
-		String mineto;
-		if(minutes < 10){
-		mineto = "0";}
-		else{ mineto = "";}
-		String ro = ":";
-		System.out.println(hours + ro + minutes + mineto + light);
+	        String light;
+        if (hours >= 12) {
+            light = "PM";
+            if (hours > 12) {
+                hours = hours - 12; // לדוגמה: 17 -> 5
+            }
+        } else {
+            light = "AM";
+        }
 
+        String mineto;
+        if (minutes < 10) {
+            mineto = "0" + minutes; // מוסיף אפס לפני המספר (למשל 8 -> "08")
+        } else {
+            mineto = "" + minutes;  // אם המספר כבר דו-ספרתי, משאיר כמו שהוא
+        }
 
-
-	}
+        System.out.println(hours + ":" + mineto + " " + light);
+    }
 }
