@@ -2,7 +2,13 @@
 public class Bill3 {
 	public static void main(String[] args) {
 		// To get you started, here is the first line in the program:
-	    String name1 = args[0];
-	    // Replace this comment with the rest of your code   
+	    String Dan = args[0];
+		String Lisa = args[1];
+		String Ron = args[2];
+		int total = Integer.parseInt(args[3]);
+		double each = total / 3.0;
+		each = Math.ceil(each);
+		System.out.println( "Dear "+ Dan +", "+ Lisa + " and " + Ron + "; pay " + each + " shekels each.");
+
 	}
 }
